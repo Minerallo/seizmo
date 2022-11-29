@@ -203,8 +203,8 @@ shading(ax,'flat');
 bg=get(get(ax,'parent'),'color');                 % these may not
 fg=get(findobj(ax,'tag','m_grid_xgrid'),'color'); % be right ...
 %fg=get(findobj(ax,'tag','m_grid_box'),'color');   % be right ...
-if(isstring(bg)); bg=name2rgb(bg); end
-if(isstring(fg)); fg=name2rgb(fg); end
+if(is_string(bg)); bg=name2rgb(bg); end
+if(is_string(fg)); fg=name2rgb(fg); end
 if(strcmp(bg,'w') || isequal(bg,[1 1 1]))
     colormap(ax,flipud(fire));
 elseif(strcmp(bg,'k') || isequal(bg,[0 0 0]))

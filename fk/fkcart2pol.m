@@ -73,7 +73,7 @@ if(~isreal(sss) || ~isequalnumelorscalar(fk,sss) || any(sss(:)<=0))
     error('seizmo:fkcart2pol:badInput',...
         'SLOWSTEPSIZE must be a positive and in sec/deg!');
 end
-if(~isstring(method))
+if(~is_string(method))
     error('seizmo:fkcart2pol:badInput',...
         'METHOD must be a string!');
 end

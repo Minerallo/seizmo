@@ -51,7 +51,7 @@ if(nargin==1 || isempty(style)); style='seizmo'; end
 
 % check style
 validstyles={'seizmo' 'rdseed'};
-if(~isstring(style) || ~any(strcmpi(style,validstyles)))
+if(~is_string(style) || ~any(strcmpi(style,validstyles)))
     error('seizmo:genname:badInput',...
         ['STYLE must be one of the following:\n' ...
         sprintf('''%s'' ',validstyles{:}) '!']);

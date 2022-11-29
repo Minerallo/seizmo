@@ -76,7 +76,7 @@ if(~flag)
     '*.*' 'All Files (*.*)'});
 else
     % just copy file to txt
-    if(nargin<1 || isempty(file) || ~isstring(file))
+    if(nargin<1 || isempty(file) || ~is_string(file))
         error('seizmo:readcsv:emptyStr',...
             'STRING must be non-empty!');
     else
@@ -86,7 +86,7 @@ end
 
 % default/check delimiter
 if(nargin<2 || isempty(delimiter)); delimiter=','; end
-if(~isstring(delimiter) || ~isscalar(delimiter))
+if(~is_string(delimiter) || ~isscalar(delimiter))
     error('seizmo:readcsv:badDelimiter',...
         'DELIMITER must be a single character!');
 end

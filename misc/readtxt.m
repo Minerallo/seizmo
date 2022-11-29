@@ -71,7 +71,7 @@ if(nargin<1 || isempty(file))
     file=[path fs file];
 else
     % check file
-    if(~isstring(file))
+    if(~is_string(file))
         error('seizmo:readtxt:fileNotString',...
             'FILE must be a string!');
     end

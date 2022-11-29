@@ -42,7 +42,7 @@ fs=filesep;
 % check directory if given
 if(nargin>0 && ~isempty(mdir))
     % check directory
-    if(~isstring(mdir))
+    if(~is_string(mdir))
         error('seizmo:create_contents_file:dirNotString',...
             'MDIR must be a string!');
     end
@@ -54,7 +54,7 @@ if(nargin>0 && ~isempty(mdir))
 end
 
 % check description if given
-if(nargin>1 && ~isempty(desc) && ~isstring(desc))
+if(nargin>1 && ~isempty(desc) && ~is_string(desc))
     error('seizmo:create_contents_file:badInput',...
         'DESC must be a string!');
 end
@@ -69,7 +69,7 @@ end
 % check file if given
 if(nargin>2 && ~isempty(file))
     % check file
-    if(~isstring(file))
+    if(~is_string(file))
         error('seizmo:create_contents_file:fileNotString',...
             'FILE must be a string!');
     end

@@ -1,7 +1,7 @@
-function [lgc]=isstring(str)
+function [lgc]=is_string(str)
 %ISSTRING    True for a string (row vector) of characters
 %
-%    Usage:    lgc=isstring(str)
+%    Usage:    lgc=is_string(str)
 %
 %    Description:
 %     LGC=ISSTRING(STR) returns TRUE if STR is a string (ie row vector) of
@@ -11,7 +11,7 @@ function [lgc]=isstring(str)
 %
 %    Examples:
 %     % A 2x2 character array will return FALSE:
-%     isstring(repmat('a',2,2))
+%     is_string(repmat('a',2,2))
 %
 %    See also: ISCHAR
 

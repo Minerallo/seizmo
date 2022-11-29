@@ -95,7 +95,7 @@ if(isempty(file))
     file=[path fs file];
 else
     % check file
-    if(~isstring(file))
+    if(~is_string(file))
         error('seizmo:write_1dmodel_nd:fileNotString',...
             'FILE must be a string!');
     end

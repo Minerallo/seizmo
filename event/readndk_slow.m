@@ -89,7 +89,7 @@ if(~flag)
         '*.*' 'All Files (*.*)'});
 else
     % just copy file to txt
-    if(nargin<1 || isempty(file) || ~isstring(file))
+    if(nargin<1 || isempty(file) || ~is_string(file))
         error('seizmo:readndk_slow:emptyStr',...
             'STRING must be non-empty!');
     else

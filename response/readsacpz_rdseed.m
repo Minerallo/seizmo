@@ -99,7 +99,7 @@ function [pz]=readsacpz_rdseed(varargin)
 % string input or files?
 global SEIZMO
 if(nargin==2 && islogical(varargin{2}) && isscalar(varargin{2}) ...
-        && varargin{2} && isstring(varargin{1}))
+        && varargin{2} && is_string(varargin{1}))
     nfiles=1;
     string=true;
 else

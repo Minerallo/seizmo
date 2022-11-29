@@ -147,7 +147,7 @@ switch lower(method)
         B=cross(submat(A,1,1:v+1),submat(A,1,2:v+2),nd);
         
         % normalize perpendiculars
-        N=vecnorm(B,nd);
+        N=vec_norm(B,nd);
         B=B./submat(N,nd,[1 1 1]);
         
         % get interior angles

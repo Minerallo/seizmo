@@ -136,7 +136,7 @@ else
         end
         
         % check phase
-        if(~isstring(results(a).phase) ...
+        if(~is_string(results(a).phase) ...
                 || ~any(strcmp(results(a).phase,validphase)))
             report.identifier='seizmo:cmb_cmb_results:badPhase';
             report.message='RESULTS.phase must be Pdiff, SHdiff, or SVdiff';
@@ -144,14 +144,14 @@ else
         end
         
         % check runname
-        if(~isstring(results(a).runname))
+        if(~is_string(results(a).runname))
             report.identifier='seizmo:cmb_cmb_results:badRunName';
             report.message='RESULTS.runname must be a string!';
             return;
         end
         
         % check dirname
-        if(~isstring(results(a).dirname))
+        if(~is_string(results(a).dirname))
             
         end
         if(~isabspath(results(a).dirname))
@@ -214,7 +214,7 @@ else
         end
         
         % check time
-        if(~isstring(results(a).time))
+        if(~is_string(results(a).time))
             report.identifier='seizmo:cmb_cmb_results:badTime';
             report.message='RESULTS.time must be a string!';
             return;
@@ -229,7 +229,7 @@ else
         end
         
         % check earthmodel
-        if(~isstring(results(a).time))
+        if(~is_string(results(a).time))
             report.identifier='seizmo:cmb_cmb_results:badMODEL';
             report.message='RESULTS.earthmodel must be a string!';
             return;

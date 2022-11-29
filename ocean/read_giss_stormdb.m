@@ -54,7 +54,7 @@ if(nargin<1 || isempty(file))
     file=strcat(path,filesep,file);
 else
     % check file
-    if(~isstring(file))
+    if(~is_string(file))
         error('seizmo:read_giss_stormdb:fileNotString',...
             'FILE must be a string!');
     end

@@ -185,7 +185,7 @@ if(isempty(file))
     file=[path fs file];
 else
     % check file
-    if(~isstring(file))
+    if(~is_string(file))
         error('seizmo:read_reflect_binary_output:fileNotString',...
             'FILE must be a string!');
     end

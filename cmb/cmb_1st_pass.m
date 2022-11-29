@@ -107,7 +107,7 @@ if(nargin<1 || isempty(phase))
         choice=menu('Align which phase?',valid{:});
     end
     phase=valid{choice};
-elseif(~isstring(phase) || ~ismember(phase,valid))
+elseif(~is_string(phase) || ~ismember(phase,valid))
     error('seizmo:cmb_1st_pass:badPhase',...
         ['PHASE must be one of the following:\n' ...
         sprintf('''%s'' ',valid{:}) '!']);
@@ -121,7 +121,7 @@ if(nargin<2 || isempty(indir))
     drawnow;
     indir=uigetdir('.','Choose a directory of data directories:');
 end
-if(~isstring(indir))
+if(~is_string(indir))
     error('seizmo:cmb_1st_pass:badInput',...
         'INDIR must be a string giving one directory!');
 end
@@ -169,10 +169,10 @@ if(islogical(odir) && isscalar(odir) && odir); odir='.'; end
 if(islogical(figdir) && isscalar(figdir) && figdir); figdir='.'; end
 
 % check odir/figdir
-if(~isstring(odir) && ~(islogical(odir) && isscalar(odir)))
+if(~is_string(odir) && ~(islogical(odir) && isscalar(odir)))
     error('seizmo:cmb_1st_pass:badInput',...
         'ODIR must be a string or TRUE/FALSE!');
-elseif(~isstring(figdir) && ~(islogical(figdir) && isscalar(figdir)))
+elseif(~is_string(figdir) && ~(islogical(figdir) && isscalar(figdir)))
     error('seizmo:cmb_1st_pass:badInput',...
         'FIGDIR must be a string or TRUE/FALSE!');
 end

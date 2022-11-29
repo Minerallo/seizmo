@@ -113,7 +113,7 @@ switch lower(type)
         pf=pf(ismember(names,in1));
     case {'st' 's' 'stn' 'kname' 'kn' 'k' 'n'}
         % check stn info
-        if(isstring(in1)); in1=cellstr(in1); end
+        if(is_string(in1)); in1=cellstr(in1); end
         if(~iscellstr(in1) || numel(in1)>4)
             error('seizmo:extractpf:badInput',...
                 ['STN1 must be one of the following:\n' ...
@@ -121,7 +121,7 @@ switch lower(type)
                 '''NAME'' ''STREAM''}']);
         end
         if(nargin==4)
-            if(isstring(in2)); in2=cellstr(in2); end
+            if(is_string(in2)); in2=cellstr(in2); end
             if(~iscellstr(in2) || numel(in2)>4)
                 error('seizmo:extractpf:badInput',...
                     ['STN2 must be one of the following:\n' ...

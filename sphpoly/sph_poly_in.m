@@ -137,10 +137,10 @@ v=v./nv([1 1 1],:)';
 pv=v-p(ones(1,size(v,1)),:);
 
 % if p == v then is a vertex and we count it
-if(any(~vecnorm(pv,2))); lgc=true; return; end
+if(any(~vec_norm(pv,2))); lgc=true; return; end
 
 % get angle between vectors
-normpv=vecnorm(pv,2);
+normpv=vec_norm(pv,2);
 costheta=sum(pv(1:end-1,:).*pv(2:end,:),2)...
     ./(normpv(1:end-1).*normpv(2:end));
 ccw=sum(p(ones(1,size(pv,1)-1),:).*cross(pv(2:end,:),pv(1:end-1,:),2),2)<0;

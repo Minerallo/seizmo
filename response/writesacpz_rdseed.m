@@ -70,7 +70,7 @@ end
 
 % check filename input
 if(nargin==1); filename=[]; end
-if(nargin>1 && ~isempty(filename) && ~isstring(filename))
+if(nargin>1 && ~isempty(filename) && ~is_string(filename))
     error('seizmo:writesacpz_rdseed:badInput',...
         'FILENAME must be a string!');
 end

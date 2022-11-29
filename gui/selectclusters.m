@@ -91,7 +91,7 @@ valid.OPT={'keep' 'delete' 'good' 'bad'};
 if(nargin<3 || isempty(opt)); opt='keep'; end
 
 % check inputs
-if(~isstring(opt) || isempty(strmatch(lower(opt),valid.OPT)))
+if(~is_string(opt) || isempty(strmatch(lower(opt),valid.OPT)))
     error('seizmo:selectclusters:badInput',...
         ['OPT must be one of the following strings:\n' ...
         sprintf('''%s'' ',valid.OPT{:})]);

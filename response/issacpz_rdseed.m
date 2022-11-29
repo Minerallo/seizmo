@@ -94,7 +94,7 @@ end
 % default/check type
 valid.TYPE={'5.1' 'OLD'};
 if(nargin<2 || isempty(type)); type='5.1'; end
-if(~isstring(type) || ~any(strcmpi(type,valid.TYPE)))
+if(~is_string(type) || ~any(strcmpi(type,valid.TYPE)))
     error('seizmo:issacpz_rdseed:badInput',...
         'TYPE is not a valid string!');
 end
@@ -144,7 +144,7 @@ for i=1:numel(floats)
                 return;
             end
         else
-            if(~isstring(pz(1).(fields{i})))
+            if(~is_string(pz(1).(fields{i})))
                 lgc=false;
                 return;
             end

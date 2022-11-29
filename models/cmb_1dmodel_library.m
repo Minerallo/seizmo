@@ -92,7 +92,7 @@ function [varargout]=cmb_1dmodel_library(varargin)
 
 % how many string inputs
 nmods=0;
-for i=1:nargin; if(isstring(varargin{i})); nmods=nmods+1; end; end
+for i=1:nargin; if(is_string(varargin{i})); nmods=nmods+1; end; end
 
 % get starting model (PREM!)
 startmod=prem;
@@ -117,7 +117,7 @@ for i=1:nargin
     end
     
     % require strings
-    if(~isstring(varargin{i}))
+    if(~is_string(varargin{i}))
         error('seizmo:cmb_1dmodel_library:badInput',...
             'All MODNAMEs must be a string!');
     end

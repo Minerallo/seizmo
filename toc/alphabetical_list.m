@@ -263,7 +263,7 @@ function []=alphabetical_list()
 %<a href="matlab:help issacpz_rdseed">issacpz_rdseed</a>                 - Returns TRUE if input is a SAC PoleZero RDSEED struct
 %<a href="matlab:help isseizmo">isseizmo</a>                       - True for SEIZMO data structures
 %<a href="matlab:help isstorms">isstorms</a>                       - True if input is a storms struct
-%<a href="matlab:help isstring">isstring</a>                       - True for a string (row vector) of characters
+%<a href="matlab:help is_string">is_string</a>                       - True for a string (row vector) of characters
 %<a href="matlab:help isvalidseizmo">isvalidseizmo</a>                  - TRUE for valid filetype/version combinations
 %<a href="matlab:help isxc">isxc</a>                           - Returns TRUE for records that are SEIZMO correlograms
 %<a href="matlab:help joinrecords">joinrecords</a>                    - Join SEIZMO records into multiple-component record(s)
@@ -632,7 +632,7 @@ function []=alphabetical_list()
 %<a href="matlab:help utc_offset">utc_offset</a>                     - Returns the TAI-UTC offset for the given dates
 %<a href="matlab:help uti2sub">uti2sub</a>                        - Square matrix upper triangle linear indices to subscripts
 %<a href="matlab:help validseizmo">validseizmo</a>                    - Returns valid SEIZMO datafile filetypes or versions
-%<a href="matlab:help vecnorm">vecnorm</a>                        - Returns vector norms
+%<a href="matlab:help vec_norm">vec_norm</a>                        - Returns vector norms
 %<a href="matlab:help version_compare">version_compare</a>                - Compares versions strings given in XX.XX.XX.... format
 %<a href="matlab:help versioninfo">versioninfo</a>                    - Returns version info for SEIZMO data records
 %<a href="matlab:help versioninfo_cache">versioninfo_cache</a>              - Check/Change VERSIONINFO caching ON=TRUE / OFF=FALSE

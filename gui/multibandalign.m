@@ -713,7 +713,7 @@ for i=1:2:nargin
             p.bank=varargin{i+1};
             keep(i:i+1)=false;
         case {'rn' 'run' 'name' 'runname'}
-            if(~isstring(varargin{i+1}))
+            if(~is_string(varargin{i+1}))
                 error('seizmo:multibandalign:badInput',...
                     'RUNNAME must be a string!');
             end
@@ -728,7 +728,7 @@ for i=1:2:nargin
             p.snrcut=varargin{i+1};
             keep(i:i+1)=false;
         case {'ft' 'filtertype'}
-            if(~isstring(varargin{i+1}) ...
+            if(~is_string(varargin{i+1}) ...
                     || ~any(strcmpi(varargin{i+1},validtypes)))
                 error('seizmo:multibandalign:badInput',...
                     'FILTERTYPE must be a filter type in IIRDESIGN!');
@@ -736,7 +736,7 @@ for i=1:2:nargin
             p.filt.type=varargin{i+1};
             keep(i:i+1)=false;
         case {'fs' 'filterstyle'}
-            if(~isstring(varargin{i+1}) ...
+            if(~is_string(varargin{i+1}) ...
                     || ~any(strcmpi(varargin{i+1},validstyles)))
                 error('seizmo:multibandalign:badInput',...
                     'FILTERSTYLE must be a filter style in IIRDESIGN!');
@@ -762,7 +762,7 @@ for i=1:2:nargin
             p.filt.passes=varargin{i+1};
             keep(i:i+1)=false;
         case {'phase'}
-            if(~isstring(varargin{i+1}) ...
+            if(~is_string(varargin{i+1}) ...
                     || ~any(strcmpi(varargin{i+1},{'Pdiff' 'Sdiff'})))
                 error('seizmo:multibandalign:badInput',...
                     'PHASE must be a ''Pdiff'' or ''Sdiff''!');
@@ -827,7 +827,7 @@ for i=1:2:nargin
             p.noisewin=varargin{i+1};
             keep(i:i+1)=false;
         case 'snrmethod'
-            if(~isstring(varargin{i+1}))
+            if(~is_string(varargin{i+1}))
                 error('seizmo:multibandalign:badInput',...
                     'SNRMETHOD must be a string!');
             end
@@ -850,14 +850,14 @@ for i=1:2:nargin
             p.winnowlimits=varargin{i+1};
             keep(i:i+1)=false;
         case 'winnowyfield'
-            if(~isstring(varargin{i+1}))
+            if(~is_string(varargin{i+1}))
                 error('seizmo:multibandalign:badInput',...
                     'WINNOWYFIELD must be a string!');
             end
             p.winnowyfield=varargin{i+1};
             keep(i:i+1)=false;
         case {'fdir' 'figdir'}
-            if(~isstring(varargin{i+1}) && ~(islogical(varargin{i+1}) ...
+            if(~is_string(varargin{i+1}) && ~(islogical(varargin{i+1}) ...
                     && isscalar(varargin{i+1})))
                 error('seizmo:multibandalign:badInput',...
                     'FIGDIR must be a string or TRUE/FALSE!');

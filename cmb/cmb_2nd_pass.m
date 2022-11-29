@@ -80,7 +80,7 @@ error(nargchk(1,inf,nargin));
 fs=filesep;
 
 % handle directory input
-if(isstring(results))
+if(is_string(results))
     if(~isabspath(results)); results=[pwd fs results]; end
     if(isdir(results))
         files=xdir([results fs '*.mat']);
@@ -161,10 +161,10 @@ if(islogical(odir) && isscalar(odir) && odir); odir='.'; end
 if(islogical(figdir) && isscalar(figdir) && figdir); figdir=odir; end
 
 % check odir
-if(~isstring(odir) && ~(islogical(odir) && isscalar(odir)))
+if(~is_string(odir) && ~(islogical(odir) && isscalar(odir)))
     error('seizmo:cmb_2nd_pass:badInput',...
         'ODIR must be a string or TRUE/FALSE!');
-elseif(~isstring(figdir) && ~(islogical(figdir) && isscalar(figdir)))
+elseif(~is_string(figdir) && ~(islogical(figdir) && isscalar(figdir)))
     error('seizmo:cmb_2nd_pass:badInput',...
         'FIGDIR must be a string or TRUE/FALSE!');
 end

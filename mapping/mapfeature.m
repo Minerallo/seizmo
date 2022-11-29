@@ -125,7 +125,7 @@ if(nargs>0); feature=varargin{1}; varargin(1)=[]; end
 if(nargs>1); opt=varargin{1}; varargin(1)=[]; end
 
 % require feature to be a string or cellstr
-if(isstring(feature)); feature=cellstr(feature); end
+if(is_string(feature)); feature=cellstr(feature); end
 if(~iscellstr(feature))
     error('seizmo:mapfeature:badInput',...
         'FEATURE must be a string or cell array of strings!');
@@ -137,10 +137,10 @@ if(nargs==1 || isempty(opt)); opt={[]}; end
 
 % check opt
 hopt=cell(nf,1);
-if(isstring(opt)); opt=cellstr(opt); end
+if(is_string(opt)); opt=cellstr(opt); end
 if(iscell(opt))
     % encapsulate {'...' ## ##}
-    if(numel(opt)==3 && isstring(opt{1}) && isnumeric(opt{2}) ...
+    if(numel(opt)==3 && is_string(opt{1}) && isnumeric(opt{2}) ...
             && isnumeric(opt{3}))
         opt={opt};
     end
@@ -156,7 +156,7 @@ if(iscell(opt))
         % require option to be either:
         % [], 'lines', 'patches', 'hatches' or {'...' ## ##}
         if(isempty(opt{i})); continue; end
-        if(isstring(opt{i}))
+        if(is_string(opt{i}))
             if(strmatch(lower(opt{i}),'lines')); opt{i}='lines';
             elseif(strmatch(lower(opt{i}),'patches')); opt{i}='patch';
             elseif(strmatch(lower(opt{i}),'hatches')); opt{i}='hatch';
@@ -167,7 +167,7 @@ if(iscell(opt))
             end
             continue;
         end
-        if(numel(opt{i})==3 && isstring(opt{i}{1}) ...
+        if(numel(opt{i})==3 && is_string(opt{i}{1}) ...
                 && isnumeric(opt{i}{2}) && isnumeric(opt{i}{3}))
             hopt{i}=opt{i};
             opt{i}='hatch';

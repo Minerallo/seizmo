@@ -131,7 +131,7 @@ error(nargchk(3,4,nargin));
 fs=filesep;
 
 % handle directory input
-if(isstring(results))
+if(is_string(results))
     if(~isabspath(results)); results=[pwd fs results]; end
     if(isdir(results))
         files=xdir([results fs '*.mat']);
@@ -156,7 +156,7 @@ if(~isreal(azrng) || ~any(numel(azrng)==[1 2]))
 elseif(~isreal(gcrng) || ~any(numel(gcrng)==[1 2]))
     error('seizmo:slowdecaypairs:badInput',...
         'GCRNG must be [MINGC MAXGC] or MINGC!');
-elseif(~isstring(odir) && ~(islogical(odir) && isscalar(odir)))
+elseif(~is_string(odir) && ~(islogical(odir) && isscalar(odir)))
     error('seizmo:slowdecaypairs:badInput',...
         'ODIR must be a string or TRUE/FALSE!');
 end

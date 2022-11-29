@@ -71,7 +71,7 @@ end
 
 % check phase
 valid={'Pdiff' 'SHdiff' 'SVdiff'};
-if(~isstring(varargin{1}) || ~ismember(varargin{1},valid))
+if(~is_string(varargin{1}) || ~ismember(varargin{1},valid))
     error('seizmo:cmb_corrections:badPhase',...
         ['PHASE must be one of the following:\n' ...
         sprintf('''%s'' ',valid{:}) '!']);

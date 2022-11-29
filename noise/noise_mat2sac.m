@@ -37,7 +37,7 @@ error(nargchk(1,2,nargin));
 fs=filesep;
 
 % check directory
-if(~isstring(noisedir))
+if(~is_string(noisedir))
     error('seizmo:noise_mat2sac:fileNotString',...
         'NOISEDIR must be a string!');
 end

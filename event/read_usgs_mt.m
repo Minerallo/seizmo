@@ -76,7 +76,7 @@ if(~flag)
         '*.*' 'All Files (*.*)'});
 else
     % just copy file to txt
-    if(nargin<1 || isempty(file) || ~isstring(file))
+    if(nargin<1 || isempty(file) || ~is_string(file))
         error('seizmo:read_usgs_mt:emptyStr',...
             'STRING must be non-empty!');
     else

@@ -115,7 +115,7 @@ end
 fs=filesep;
 
 % check indir
-if(~isstring(indir))
+if(~is_string(indir))
     error('seizmo:freqwindow:badInput',...
         'INDIR must be a directory location!');
 end
@@ -127,7 +127,7 @@ end
 
 % check outdir
 reply='o';
-if(~isstring(outdir))
+if(~is_string(outdir))
     error('seizmo:freqwindow:badInput',...
         'OUTDIR must be a valid directory path!');
 end
@@ -521,20 +521,20 @@ for i=1:2:nargin
             end
             p.snrwin=varargin{i+1};
         case {'snrmethod'}
-            if(~isstring(varargin{i+1}))
+            if(~is_string(varargin{i+1}))
                 error('seizmo:freqwindow:badInput',...
                     'SNRMETHOD must be a string!');
             end
             p.snrmethod=varargin{i+1};
         case {'model'}
-            if(~isstring(varargin{i+1}))
+            if(~is_string(varargin{i+1}))
                 error('seizmo:freqwindow:badInput',...
                     'MODEL must be a string!');
             end
             p.model=varargin{i+1};
         case {'wave'}
             validwave={'rayleigh' 'love'};
-            if(~isstring(varargin{i+1}) ...
+            if(~is_string(varargin{i+1}) ...
                     || ~any(strcmpi(varargin{i+1},validwave)))
                 error('seizmo:freqwindow:badInput',...
                     'WAVE must be a string!');
@@ -542,7 +542,7 @@ for i=1:2:nargin
             p.wave=varargin{i+1};
         case {'speed'}
             validspeed={'group' 'phase'};
-            if(~isstring(varargin{i+1}) ...
+            if(~is_string(varargin{i+1}) ...
                     || ~any(strcmpi(varargin{i+1},validspeed)))
                 error('seizmo:freqwindow:badInput',...
                     'SPEED must be a string!');
@@ -559,7 +559,7 @@ for i=1:2:nargin
             end
             p.bank=varargin{i+1};
         case 'normstyle'
-            if(~isstring(varargin{i+1}) || ~any(strcmpi(varargin{i+1},...
+            if(~is_string(varargin{i+1}) || ~any(strcmpi(varargin{i+1},...
                     {'single' 'individually' 'individual' 'one' ...
         	        'separately' 'group' 'together' 'all'})))
         	    error('seizmo:freqwindow:badInput',...

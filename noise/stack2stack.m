@@ -149,7 +149,7 @@ fs=filesep;
 opt=stack2stack_parameters(varargin{:});
 
 % check stack directory
-if(~isstring(stackdir))
+if(~is_string(stackdir))
     error('seizmo:stack2stack:dirNotString',...
         'STACKDIR must be a string!');
 end

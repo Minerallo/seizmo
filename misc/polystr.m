@@ -47,7 +47,7 @@ if(~isreal(p) || ~isvector(p))
     error('seizmo:polystr:badInput',...
         'P must be a vector of real-valued polynomial coefficients!');
 end
-if(~isstring(var))
+if(~is_string(var))
     error('seizmo:polystr:badInput',...
         'VAR must be a character string!');
 end

@@ -83,7 +83,7 @@ if(nargin==2); sodcsv=[]; end
 
 % default/check
 if(nargin<4 || isempty(src)); src='rdseed'; end
-if(~isstring(src) || ~any(strcmpi(src,{'rdseed' 'sod'})))
+if(~is_string(src) || ~any(strcmpi(src,{'rdseed' 'sod'})))
     error('seizmo:prep_cmb_data:badInput',...
         'DATASRC must be either ''RDSEED'' or ''SOD''!');
 end
@@ -92,7 +92,7 @@ end
 fs=filesep;
 
 % check indir
-if(~isstring(indir))
+if(~is_string(indir))
     error('seizmo:prep_cmb_data:badInput',...
         'INDIR must be a string giving one directory!');
 end
@@ -103,7 +103,7 @@ if(~isdir(indir))
 end
 
 % check outdir
-if(~isstring(outdir))
+if(~is_string(outdir))
     error('seizmo:prep_cmb_data:badInput',...
         'OUTDIR must be a string giving one directory!');
 end

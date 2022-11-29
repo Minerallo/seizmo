@@ -39,7 +39,7 @@ function [slow]=deg2slowness(ph,deg)
 error(nargchk(2,2,nargin));
 
 % check phase
-if(~isstring(ph))
+if(~is_string(ph))
     error('seizmo:deg2slowness:badInput',...
         'PHASE must be a string!');
 end

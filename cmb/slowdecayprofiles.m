@@ -126,7 +126,7 @@ error(nargchk(1,4,nargin));
 fs=filesep;
 
 % handle directory input
-if(isstring(results))
+if(is_string(results))
     if(~isabspath(results)); results=[pwd fs results]; end
     if(isdir(results))
         files=xdir([results fs '*.mat']);
@@ -156,7 +156,7 @@ elseif(any(abs(azrng)>540))
 elseif(~isreal(gcrng) || numel(gcrng)~=2)
     error('seizmo:slowdecayprofiles:badInput',...
         'GCRNG must be [GCMIN GCMAX]!');
-elseif(~isstring(odir) && ~(islogical(odir) && isscalar(odir)))
+elseif(~is_string(odir) && ~(islogical(odir) && isscalar(odir)))
     error('seizmo:slowdecayprofiles:badInput',...
         'ODIR must be a string or TRUE/FALSE!');
 end

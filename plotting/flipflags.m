@@ -70,7 +70,7 @@ for i=1:numel(ax)
             end
         end
     else
-        if(isstring(dir) && any(strcmpi(dir,{'left' 'right' 'center'})))
+        if(is_string(dir) && any(strcmpi(dir,{'left' 'right' 'center'})))
             % switch left and right b/c we are indicating the which side
             % of the marker the flags are on, not which side of the flags
             % are touching the marker

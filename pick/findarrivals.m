@@ -53,7 +53,7 @@ nrecs=numel(data);
 
 % check phaselist
 if(nargin==1); phaselist=[]; end
-if(~isempty(phaselist) && ~isstring(phaselist) && ~iscellstr(phaselist))
+if(~isempty(phaselist) && ~is_string(phaselist) && ~iscellstr(phaselist))
     error('seizmo:findarrivals:badInput',...
         'PHASELIST must be a string like ''P'' or ''P,PP''!');
 end
@@ -79,7 +79,7 @@ if(any(call))
 end
 
 % parse comma-separated phases
-if(isstring(phaselist))
+if(is_string(phaselist))
     phaselist=getwords(phaselist,',');
 end
 

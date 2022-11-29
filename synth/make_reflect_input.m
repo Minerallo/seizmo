@@ -309,7 +309,7 @@ if(isempty(o.file))
     o.file=[path fs o.file];
 else
     % check file
-    if(~isstring(o.file))
+    if(~is_string(o.file))
         error('seizmo:make_reflect_input:fileNotString',...
             'FILE must be a string!');
     end

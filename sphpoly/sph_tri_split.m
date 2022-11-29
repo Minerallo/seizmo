@@ -69,7 +69,7 @@ st=size(tri);
 if(sv(2)~=3 || numel(sv)>2)
     error('seizmo:sph_tri_split:badInput',...
         'V must be a Nx3 array!');
-elseif(any(abs(vecnorm(v,2)-1)>sqrt(3)*eps))
+elseif(any(abs(vec_norm(v,2)-1)>sqrt(3)*eps))
     error('seizmo:sph_tri_split:badInput',...
         'Vertices must be on the unit sphere!');
 elseif(st(2)~=3 || numel(st)>2 || st(1)/2+2~=sv(1))
@@ -160,9 +160,9 @@ for i=1:n
         r=(d([1 1 1],:)'.*c(j.*k,:)+u([1 1 1],:)'.*a(j.*k,:))./s(i);
         
         % project onto unit circle
-        pn=vecnorm(p,2);
-        qn=vecnorm(q,2);
-        rn=vecnorm(r,2);
+        pn=vec_norm(p,2);
+        qn=vec_norm(q,2);
+        rn=vec_norm(r,2);
         p=p./pn(:,[1 1 1]);
         q=q./qn(:,[1 1 1]);
         r=r./rn(:,[1 1 1]);
@@ -178,7 +178,7 @@ for i=1:n
         % now repeat for interior vertices
         if(~isempty(im))
             m=(w([1 1 1],:)'.*r(z,:)+v([1 1 1],:)'.*q(y,:))./z([1 1 1],:)';
-            mn=vecnorm(m,2);
+            mn=vec_norm(m,2);
             m=m./mn(:,[1 1 1]);
             h(im,:)=m;
         end

@@ -52,13 +52,13 @@ validspeed={'group' 'phase'};
 validmodel={'cub2' 'prem' 'ak135' 'pac'};
 
 % check options
-if(~isstring(wave) || ~any(strcmpi(wave,validwave)))
+if(~is_string(wave) || ~any(strcmpi(wave,validwave)))
     error('seizmo:ttsurf:badInput',...
         'WAVETYPE must be either ''Rayleigh'' or ''Love''!');
-elseif(~isstring(speed) || ~any(strcmpi(speed,validspeed)))
+elseif(~is_string(speed) || ~any(strcmpi(speed,validspeed)))
     error('seizmo:ttsurf:badInput',...
         'VELOTYPE must be either ''Group'' or ''Phase''!');
-elseif(~isstring(model) || ~any(strcmpi(model,validmodel)))
+elseif(~is_string(model) || ~any(strcmpi(model,validmodel)))
     error('seizmo:ttsurf:badInput',...
         ['MODEL must be one of the following:\n' ...
         sprintf('''%s'' ',validmodel{:})]);
